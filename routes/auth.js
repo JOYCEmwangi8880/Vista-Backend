@@ -65,7 +65,7 @@ router.post('/register', upload.single('profileImage'), async (req, res) => {
     const request = mailjet.post('send').request({
       FromEmail: 'your_email@example.com',
       FromName: 'Terravista',
-      Subject: 'Your OTP Code',
+      Subject: ' OTP Code',
       'Text-part': `Your OTP code is ${otp}. It will expire in 10 minutes.`,
       Recipients: [{ Email: email }],
     });
