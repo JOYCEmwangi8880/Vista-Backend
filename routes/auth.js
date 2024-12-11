@@ -66,7 +66,7 @@ router.post('/register', upload.single('profileImage'), async (req, res) => {
       FromEmail: 'your_email@example.com',
       FromName: 'Terravista',
       Subject: ' OTP Code',
-      'Text-part': `Your OTP code is ${otp}. It will expire in 10 minutes.`,
+      'Text-part': `Your OTP code is ${otp}. It will expire in 5 minutes.`,
       Recipients: [{ Email: email }],
     });
     await request;
